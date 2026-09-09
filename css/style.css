@@ -1,116 +1,298 @@
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 40px;
-  color: #2f3b2c;
-  background-color: #fbfaf6;
-  line-height: 1.6;
+/* ===== MODERN CLEAN DESIGN ===== */
+
+* {
+    box-sizing: border-box;
 }
 
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px;
+    color: #26352b;
+    background:
+        radial-gradient(circle at top left, #e4f0df, transparent 35%),
+        #f6f8f5;
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+
 header {
-  background-color: #4c7a4a;
-  color: #ffffff;
-  padding: 25px 20px;
-  border-radius: 10px;
-  margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+    padding: 45px;
+    margin-bottom: 45px;
+    border-radius: 24px;
+    color: white;
+    background: linear-gradient(135deg, #214d32, #4f8a5a);
+    box-shadow: 0 15px 35px rgba(33, 77, 50, .20);
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -70px;
+    top: -80px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.10);
 }
 
 header h1 {
-  margin: 0 0 8px;
+    position: relative;
+    z-index: 1;
+    margin: 0 0 10px;
+    font-size: 2.5rem;
+    letter-spacing: -1px;
 }
 
 header p {
-  margin: 0;
-  opacity: 0.9;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    color: #e4eee5;
 }
+
+/* ===== TITLES ===== */
 
 h2 {
-  color: #4c7a4a;
-  border-bottom: 2px solid #d8e6d5;
-  padding-bottom: 6px;
-  margin-top: 35px;
+    position: relative;
+    margin: 45px 0 22px;
+    padding-left: 15px;
+    color: #214d32;
+    font-size: 1.6rem;
 }
 
-img {
-  width: 260px;
-  margin: 0 15px 15px 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 5px;
+    height: 25px;
+    border-radius: 10px;
+    background: #d4774d;
+}
+
+/* ===== TEXT ===== */
+
+p {
+    color: #59675d;
 }
 
 a {
-  color: #c96a3a;
+    color: #d06f45;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-  background-color: #ffffff;
-  border-radius: 8px;
-  overflow: hidden;
+a:hover {
+    color: #214d32;
 }
 
-th {
-  background-color: #4c7a4a;
-  color: #ffffff;
-  text-align: left;
+/* ===== IMAGES ===== */
+
+img {
+    width: 260px;
+    margin: 0 15px 15px 0;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+    transition: .3s;
 }
 
-td, th {
-  padding: 10px 12px;
+img:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,.18);
 }
 
-tr:nth-child(even) {
-  background-color: #f2f7f0;
-}
-
-form {
-  background-color: #ffffff;
-  padding: 18px;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  max-width: 500px;
-}
-
-label {
-  font-weight: bold;
-  color: #4c7a4a;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 4px;
-  border: 1px solid #d8e6d5;
-  border-radius: 5px;
-  font-family: inherit;
-  box-sizing: border-box;
-}
-
-button {
-  background-color: #4c7a4a;
-  color: #ffffff;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-button:hover {
-  background-color: #3a5f39;
-}
+/* ===== CARDS ===== */
 
 .card {
-  background-color: #ffffff;
-  border-left: 4px solid #c96a3a;
-  padding: 12px 15px;
-  margin-top: 12px;
-  border-radius: 5px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    position: relative;
+    padding: 22px 25px;
+    margin-top: 18px;
+    border-radius: 16px;
+    background: rgba(255,255,255,.9);
+    border: 1px solid #e0e8df;
+    box-shadow: 0 7px 20px rgba(30,60,35,.07);
+    transition: .25s;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 18px;
+    bottom: 18px;
+    width: 4px;
+    border-radius: 0 5px 5px 0;
+    background: #d4774d;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(30,60,35,.12);
 }
 
 .card b {
-  color: #4c7a4a;
+    color: #2f7140;
+}
+
+/* ===== TABLE ===== */
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    margin-top: 18px;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+th {
+    padding: 15px;
+    text-align: left;
+    color: white;
+    background: linear-gradient(135deg, #285d37, #4d8958);
+}
+
+td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #edf1ec;
+    color: #566258;
+}
+
+tr:nth-child(even) {
+    background: #f7faf6;
+}
+
+tr:hover {
+    background: #edf5eb;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===== FORM ===== */
+
+form {
+    max-width: 550px;
+    padding: 28px;
+    border-radius: 18px;
+    background: white;
+    border: 1px solid #e1e8df;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #285d37;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 5px 0 16px;
+    border: 1px solid #d9e3d7;
+    border-radius: 10px;
+    background: #f9fbf8;
+    font-family: inherit;
+    outline: none;
+    transition: .2s;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #579261;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(87,146,97,.12);
+}
+
+/* ===== BUTTON ===== */
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background: linear-gradient(135deg, #357044, #5b9662);
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(53,112,68,.20);
+    transition: .25s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 22px rgba(53,112,68,.28);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ===== LISTS ===== */
+
+ul,
+ol {
+    padding-left: 24px;
+    color: #59675d;
+}
+
+li {
+    margin-bottom: 7px;
+}
+
+li::marker {
+    color: #d4774d;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 700px) {
+    body {
+        padding: 20px;
+    }
+
+    header {
+        padding: 32px 25px;
+        border-radius: 18px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    img {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    form {
+        padding: 22px;
+    }
+
+    table {
+        font-size: .9rem;
+    }
+
+    th,
+    td {
+        padding: 11px;
+    }
 }
